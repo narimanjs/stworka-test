@@ -1,0 +1,105 @@
+:root {
+  --progress-percent: 0; /* Set this to the completion percentage (0 to 100) */
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background-color: #333;
+}
+
+.checklist-container {
+  display: flex;
+  align-items: center;
+  background-color: #3579f5;
+  padding: 15px;
+  border-radius: 10px;
+  width: 743px;
+  height: 91px;
+  margin: 33% auto;
+  position: relative;
+}
+
+.checklist-circle {
+  position: absolute;
+  top: 16px;
+  left: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+
+.circular-chart {
+  width: 60px;
+  height: 60px;
+  transform: rotate(-90deg);
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.3s ease;
+  stroke-dasharray: calc(var(--progress-percent) * 31.4 / 100) 31.4;
+}
+
+.checklist-circle span {
+  position: absolute;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.checklist-label {
+  position: absolute;
+  top: 12px;
+  left: 98px;
+  padding: 0 10px;
+  background-color: #2364db;
+  border-radius: 40px 0 0 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+.checklist-details {
+  flex: 1;
+  color: #fff;
+  margin-left: 100px; /* Adjust this value if needed for better alignment */
+}
+
+.checklist-status {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.checklist-action {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #e6e6e6;
+}
+
+.checklist-button {
+  background-color: #f4f8ff;
+  color: #4777ed;
+  border: none;
+  padding: 10px 32px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.checklist-button:hover {
+  background-color: #e6e6e6;
+}
